@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+    Ten plik XML zawiera definicje prostej animacji.
+    W ciagu pieciu sekund kontrolka zostanie przesunieta w goe o 100 pikseli,
+	a nastepnie w dol tez o 100 pikseli.
+-->
+	<set
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:shareInterpolator="false">
+	
+    <translate android:toYDelta="-100"
+               android:fillAfter="true"
+               android:duration="2500"
+               />
+	
+    <translate android:toYDelta="100"
+               android:fillAfter="true"
+               android:duration="2500"
+               android:startOffset="2500"/>
+	
+</set>

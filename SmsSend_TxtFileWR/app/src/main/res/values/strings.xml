@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SmsSend_TxtFileWR</string>
+    <string name="nr_tel">Nr tel</string>
+    <string name="tekst">Wiadomość</string>
+    <string name="wy_lij">Wyślij</string>
+    <string name="send">Send</string>
+    <string name="all_contacts_read">All Contacts read</string>
+    <string name="plik_folder_prywatny">plik - folder prywatny W/R</string>
+    <string name="plik_folder_publiczny">plik - folder publiczny W/R</string>
+</resources>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">09_SharedPreferences</string>
+    <string name="nazwa_activity">Nazwa activity</string>
+    <string name="zmiana_activity">=&gt;</string>
+    <string name="preferencja">Preferencja</string>
+    <string name="nazwa">nazwa</string>
+    <string name="warto">wartość</string>
+    <string name="dodaj_zmie_wsp_lne">Dodaj/zmień wsp.</string>
+    <string name="usu_wsp_lne_wg_nazwy">Usuń wsp. wg nazwy</string>
+    <string name="dodaj_zmie_w_aktywno_ci">Dodaj/zmień pryw.</string>
+    <string name="usu_w_aktyw_wg_nazwy">Usuń pryw. wg nazwy</string>
+    <string name="w_a_ciwo_ci_wsp_lne">*PREFERENCJE WSPÓLNE*</string>
+    <string name="usu_wszystkie_w_wsp_lne">Usuń wszystkie wsp.</string>
+    <string name="w_a_ciwo_ci_aktywno_ci">*PREFERENCJE PRYWATNE*</string>
+    <string name="usu_wszystkie_w_aktywn">Usuń wszystkie pryw.</string>
+    <string name="tu_zostan_wy_wietlone_w_a_ciwo_ci">-Tu zostaną wyświetlone preferencje-</string>
+</resources>

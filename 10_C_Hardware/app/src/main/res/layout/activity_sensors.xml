@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SensorsActivity">
+
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_sensors_48"
+        tools:ignore="VectorDrawableCompat" />
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informacje o czujnikach"
+        android:textSize="30sp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RadioGroup
+        android:id="@+id/sensor_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+
+        <RadioButton
+            android:id="@+id/sensor_accel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Akcelerometr" />
+
+        <RadioButton
+            android:id="@+id/sensor_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperatura" />
+
+        <RadioButton
+            android:id="@+id/sensor_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Światło" />
+
+        <RadioButton
+            android:id="@+id/sensor_mag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Magnetyczny" />
+
+        <RadioButton
+            android:id="@+id/sensor_orient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Położenie" />
+
+        <RadioButton
+            android:id="@+id/sensor_prox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zbliżeniowy" />
+
+        <RadioButton
+            android:id="@+id/sensor_pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ciśnienie" />
+
+        <RadioButton
+            android:id="@+id/sensor_gyro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Żyroskop" />
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/start_sensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uruchom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sensor_group"
+        app:layout_constraintTop_toTopOf="@id/sensor_group"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/stop_sensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zatrzymaj"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sensor_group"
+        app:layout_constraintTop_toTopOf="@id/sensor_group" />
+
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+
+        android:layout_marginTop="70dp"
+        android:text="... tu zostaną wyświetlone informacje z czujnika ..."
+        app:layout_constraintLeft_toRightOf="@id/sensor_group"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sensor_group" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

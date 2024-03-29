@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstSimplePreferencesActivity">
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/nazwa_activity"
+        android:textColor="#F44336"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/btnGo"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/btnGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/zmiana_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPref"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/preferencja"
+        android:textSize="10pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnGo" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/design_default_color_primary"
+        android:minHeight="32dp"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@id/tvPref"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <TextView
+        android:id="@+id/tvPrefName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/nazwa"
+        android:textColor="@color/white"
+        android:textSize="10pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPref" />
+
+    <TextView
+        android:id="@+id/tvPrefValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/warto"
+        android:textColor="@color/white"
+        android:textSize="10pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPref" />
+
+
+    <EditText
+        android:id="@+id/etPrefName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:autofillHints=""
+        android:inputType="text"
+        android:textSize="10pt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPrefName"
+        app:layout_constraintWidth_percent="0.5"
+        tools:ignore="LabelFor" />
+
+
+    <EditText
+        android:id="@+id/etPrefValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:autofillHints=""
+        android:inputType="text"
+        android:textSize="10pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPrefValue"
+        app:layout_constraintWidth_percent="0.5"
+        tools:ignore="LabelFor" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPrefName">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnAddSharedPref"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_column="0"
+                    android:text="@string/dodaj_zmie_wsp_lne"
+
+                    />
+
+                <Button
+                    android:id="@+id/btnClearSharedPrefByName"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_column="2"
+                    android:text="@string/usu_wsp_lne_wg_nazwy"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnAddActivityPref"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_column="0"
+                    android:text="@string/dodaj_zmie_w_aktywno_ci"
+                   />
+
+                <Button
+                    android:id="@+id/btnClearActPrefByName"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_column="2"
+                    android:text="@string/usu_w_aktyw_wg_nazwy"
+                     />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:text="@string/w_a_ciwo_ci_wsp_lne"
+                    />
+
+                <Button
+                    android:id="@+id/btnClearShared"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="@string/usu_wszystkie_w_wsp_lne"
+                     />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvAppPrefs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="3"
+                    android:text="@string/tu_zostan_wy_wietlone_w_a_ciwo_ci"
+                    android:textColor="#f00"
+                    android:textSize="6pt" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:text="@string/w_a_ciwo_ci_aktywno_ci"
+                    android:textSize="4pt" />
+
+                <Button
+                    android:id="@+id/btnClearAct"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_column="2"
+                    android:text="@string/usu_wszystkie_w_aktywn"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvActivityPrefs"
+                    android:layout_width="wrap_content"
+                    android:layout_span="3"
+                    android:text="@string/tu_zostan_wy_wietlone_w_a_ciwo_ci"
+                    android:textColor="#0f0"
+                    android:textSize="6pt" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
